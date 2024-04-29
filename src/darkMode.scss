@@ -1,0 +1,184 @@
+.dark {
+
+    .home {
+        background: rgb(64, 63, 63);
+        color: white;
+        border: 2px white;
+        .post {
+            background: black;
+            color: white;
+    
+            .detalis {
+                border-bottom: 1px bold white;
+            }
+        }
+    }
+
+
+.navbar {
+    background: rgb(21, 20, 20);
+    color: white;
+    border: 3px bisque;
+
+    span {
+        color: goldenrod;
+    }
+
+    input {
+        color: white;
+    }
+}
+
+.search-results {
+    background: black;
+    box-shadow: 0 3px 5px rgba(255, 255, 255, 0.8);
+}
+
+.leftbar {
+    background: rgb(21, 20, 20);
+    color: white;
+
+   .container {
+    .menu {
+        .user {
+            .userInfo {
+                background: rgb(64, 63, 63);
+
+                a {
+                   color: white;
+                }
+            }
+            .biography {
+                background: rgb(64, 63, 63);
+            }
+        }
+    }
+    .item {
+        background: rgb(64, 63, 63);
+    }
+   }
+}
+
+.leftbar::-webkit-scrollbar {
+    width: 5px; 
+    background-color: black; 
+  }
+
+.rightbar {
+    background: rgb(21, 20, 20);
+    color: white;
+
+    .container {
+        .follower {
+            .followers {
+                background: rgb(64, 63, 63);
+                .followersList {
+                    ul {
+                        li {
+                            a {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+            .following {
+                background: rgb(64, 63, 63);
+                .followingList {
+                    ul {
+                        li {
+                            a {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .photo-gallery {
+            background: rgb(64, 63, 63);
+
+            h3 {
+                color: white;
+            }
+        }
+    }
+}
+
+.profile {
+    background: rgb(64, 63, 63);
+
+    .uInfo {
+        background: rgb(21, 20, 20);
+        color: white;
+    }
+
+    .post {
+        background: black;
+        color: white;
+
+        .detalis {
+            border-bottom: 1px bold white;
+        }
+    }    
+}
+.comments {
+    .write {
+        input {
+            background: white;
+        }
+    }
+    .comment {
+        border-bottom: 1px solid grey;
+    }
+    .info {
+        a {
+            span {
+                border-bottom: 0.5px solid rgb(66, 64, 64);
+                color: white;
+            }
+            p {
+               color: rgb(169, 166, 166);
+            }
+        }
+    }
+}
+.buttons {
+    .right-button {
+        .fa-icon {
+            background: rgb(64, 63, 63);
+        }
+    }
+}
+.section {
+    background-color: black;
+}
+
+.edit-user-content {
+    .edit-content {
+        form {
+            label {
+                color: black
+            }
+        }
+    }
+}
+
+.modal-edit-post-content {
+    .content {
+        textarea {
+            color: black;
+        }
+    }
+}
+.modal-edit-comment-content {
+    .content {
+        textarea {
+            color: black;
+        }
+    }
+}
+}
+
+

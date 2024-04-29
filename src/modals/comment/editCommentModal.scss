@@ -1,0 +1,59 @@
+.modal-edit-comment-content {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.95);
+    box-shadow: rgba(0, 0, 0, 0.8) 0 0 1000px 1000px;
+    max-width: 650px;
+    margin: auto;
+    padding: 50px;
+    position: absolute;
+    top:10%;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    .close {
+        position: absolute;
+        top: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        color: white;
+      }
+      h2 {
+        font-size: 16px;
+        font-family:'Times New Roman', Times, serif;
+        color: white;
+      }
+
+      .content {
+
+        form {
+          img {
+            width: 50px;
+            height: 50px;
+          }
+        }
+
+        textarea {
+            width: 100%; 
+            padding: 30px; 
+            box-sizing: border-box; 
+            font-size: 18px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: silver;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer; 
+        }
+        button:active {
+          background-color: black;
+          color: silver
+        }
+      }  
+}

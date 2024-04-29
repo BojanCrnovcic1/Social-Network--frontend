@@ -1,0 +1,68 @@
+.edit-user-content {
+    display: block;
+    flex-direction: column;
+    background-color: white;
+    max-width: 650px;
+    margin: auto;
+    padding: 50px;
+    position: absolute;
+    top:10%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+
+    .close {
+        position: absolute;
+        top: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        color: rgb(172, 146, 4);
+      }
+      h2 {
+        font-size: 16px;
+        font-family:'Times New Roman', Times, serif;
+        color: black;
+      }
+      h4 {
+        font-size: 14px;
+        font-family:'Times New Roman', Times, serif;
+        color: black;
+      }
+
+      .edit-content {
+        display: flex;
+        flex-direction: column;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+
+            label {
+                font-size: 16px;
+            }
+            input {
+                border: none;
+                border-bottom: 1px solid lightgray;
+                padding: 20px 10px;
+            }
+            button {
+                width: 50%;
+                padding: 5px;
+                border: none;
+                background-color: #938eef;
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+              }
+            button:active {
+              background-color: white;
+              border-color: #938eef;
+              color: #938eef;
+
+            }
+        }
+      }
+}

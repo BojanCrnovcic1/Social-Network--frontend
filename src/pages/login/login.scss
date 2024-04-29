@@ -1,0 +1,121 @@
+.login {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(193, 190, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .card {
+      width: 50%;
+      display: flex;
+      background-color: white;
+      border-radius: 10px;
+      min-height: 600px;
+      overflow: hidden;
+  
+      .left {
+        flex: 1;
+        background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
+          url("https://th.bing.com/th/id/R.fd312a666d5e6e0d4af89265f9246548?rik=JA2X1gmT013A2g&riu=http%3a%2f%2fcdn.playbuzz.com%2fcdn%2f3366d3b6-fd8f-470b-85ff-e4f5d335170b%2fedd44274-5677-44d0-973f-847af1e57775.jpg&ehk=7gpr79E7pKt%2fyGVza1LegrQpdGNT1R5s4ckHw8FtckM%3d&risl=&pid=ImgRaw&r=0")
+            center;
+        background-size: cover;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        color: white;
+  
+        h1 {
+          font-size: 100px;
+          line-height: 100px;
+          margin: 0; 
+        }
+        
+        span {
+          font-size: 14px;
+        }
+        
+        button {
+          width: 50%;
+          padding: 10px;
+          border: none;
+          background-color: white;
+          color: rebeccapurple;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+  
+      .right {
+        flex: 1;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        justify-content: center;
+  
+        h1 {
+        color: #555;
+        }
+        
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          
+          input {
+          border: none;
+          border-bottom: 1px solid lightgray;
+          padding: 20px 10px;
+          }
+          
+          button {
+            width: 50%;
+            padding: 10px;
+            border: none;
+            background-color: #938eef;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 1250px) {
+      .card {
+        margin-top: 320px;
+        flex-direction: column;
+        width: 80%; 
+    }
+      .left {
+          padding: 40px; 
+      } 
+      .right {
+          padding: 40px; 
+      }
+  }
+
+    @media screen and (max-width: 768px) {
+      .card {
+          margin-top: 320px;
+          flex-direction: column;
+          width: 80%; 
+      }
+
+      .left {
+        padding: 20px;
+      }
+
+      .right {
+          padding: 20px;
+      }
+  }
+
+  @media screen and (max-width: 426px) {
+      .card {
+          width: 100%;
+      }
+  }
+  }

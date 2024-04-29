@@ -1,0 +1,50 @@
+.home {
+    padding: 20px 70px;
+    background-color: rgb(237, 229, 227);
+    border-radius: 5px;
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        padding-bottom: 40px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+
+        .left-button {
+            flex: 1;
+            button {
+                width: 25vw;
+                padding: 10px 50px;
+                border-radius: 1%;
+                border: none;
+                background-color: rgb(105, 105, 214);
+                color: rgb(237, 229, 227);
+                font-size: 16px;
+                cursor: pointer;
+            }
+            button:active {
+                background: rgb(237, 229, 227);
+                color: rgb(105, 105, 214);
+                transition: 0.3s;
+               }
+        }
+
+        .right-button {
+            .fa-icon {              
+                color: rgb(105, 105, 214);
+                background: rgb(237, 229, 227);
+                width: 27%;
+                height: 27%;
+                cursor: pointer;
+            }
+            .fa-icon:active {
+                background: rgb(105, 105, 214);
+                color: rgb(237, 229, 227);
+                transition: 0.3s; 
+               }
+            }
+        }
+        
+    }

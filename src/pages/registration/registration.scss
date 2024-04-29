@@ -1,0 +1,149 @@
+.register {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(193, 190, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .card {
+      width: 50%;
+      display: flex;
+      flex-direction: row-reverse;
+      background-color: white;
+      border-radius: 10px;
+      min-height: 600px;
+      overflow: hidden;
+  
+      .left {
+        flex: 1;
+        width: 48%;
+        background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
+          url("https://th.bing.com/th/id/R.88fdfd852584163819a533fd2895a280?rik=r8481uxmL4o%2bCQ&riu=http%3a%2f%2fimg06.deviantart.net%2f015d%2fi%2f2013%2f044%2ff%2f9%2fsiluet_at_the_beach_by_gilangjabarizki-d5us4ue.jpg&ehk=ZyBAT0qN0T3w5rdrk9aqB21gvc%2fPWw6ksqOzTimQ3pg%3d&risl=&pid=ImgRaw&r=0")
+            center;
+        background-size: cover;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        color: white;
+        align-items: center;
+  
+        h1 {
+          font-size: 100px;
+          line-height: 100px;
+        }
+    
+        span {
+          font-size: 14px;
+        }
+        
+        button {
+          width: 100%;
+          padding: 10px;
+          border: none;
+          background-color: white;
+          color: rebeccapurple;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+  
+      .right {
+        flex: 1;
+        width: 52%;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        justify-content: center;
+  
+        h1 {
+        color: #555;
+        }
+        
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          
+          input {
+          border: none;
+          border-bottom: 1px solid lightgray;
+          padding: 20px 10px;
+          }
+          
+          button {
+            width: 50%;
+            padding: 10px;
+            border: none;
+            background-color: #938eef;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 1250px) {
+      .card {
+        margin-top: 320px;
+        flex-direction: column;
+        width: 80%; 
+
+        .left {
+         
+          width: 100%;
+          h1 {
+            font-size: 100px;
+            padding-right: 70px;
+          }
+          p {
+            font-size: 14px;
+            overflow-wrap: break-word;
+          }
+        }
+        .right {
+          padding: 20px;
+        }
+    }
+  }
+
+    @media screen and (max-width: 768px) {
+      .card {
+          margin-top: 320px;
+          flex-direction: column;
+          width: 80%; 
+
+          .left {
+            margin-top: 320px;
+            width: 100%;
+            h1 {
+              font-size: 80px;
+              padding-right: 70px;
+            }
+            p {
+              font-size: 14px;
+              overflow-wrap: break-word;
+            }
+          }
+          .right {
+            padding: 20px;
+          }
+      }
+
+  }
+
+  @media screen and (max-width: 426px) {
+      .card {
+          width: 100%;
+      }
+  }
+  }
+
+  .final {
+    width: 30vw;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+  }
