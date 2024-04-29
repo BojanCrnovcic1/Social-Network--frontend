@@ -14,7 +14,7 @@ const DeletePostModal: React.FC<DeletePostModalProps> = ({ show, post, handleClo
 
     useEffect(() => {
         deleteSubmit();
-    }, [deletePost]);
+    }, []);
 
     const deleteSubmit = async () => {
         apiService(`api/post/${post.postId}`, 'delete', {})

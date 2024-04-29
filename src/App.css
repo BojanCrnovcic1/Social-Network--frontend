@@ -1,18 +1,21 @@
 .section {
+  display: flex;
   background-color: white;
 
   
 }
 
 .left-toggle {
+  
   width: 20px;
   display: none;
-  z-index: 9999;
+  z-index: 10000;
 }
 
 .right-toggle {
   display: none;
   width: 20px;
+  z-index: 10000;
 }
 
 @media screen and (max-width: 1250px) {

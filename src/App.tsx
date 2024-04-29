@@ -14,7 +14,7 @@ import { useAuth } from './context/AuthContext';
 function App() {
   const { user } = useAuth();
   const [leftBarVisible, setLeftBarVisible] = useState(false);
-  const [rightBarVisible, setRightBarVisible] = useState(true);
+  const [rightBarVisible, setRightBarVisible] = useState(false);
   
   const toggleLeftBar = () => {
     setLeftBarVisible(!leftBarVisible);
@@ -28,7 +28,7 @@ function App() {
     return (
       <div>
         <NavBar />
-        <div className='section' style={{display: 'flex'}}>
+        <div className='section'>
           <button  type='button' className='left-toggle' onClick={toggleLeftBar} >left</button>         
             <LeftBar visible={leftBarVisible}/>
           
