@@ -9,7 +9,6 @@ import apiService, { ApiResponse } from '../../api/api.service';
 import { useAuth } from '../../context/AuthContext';
 import EditPostModal from '../../modals/post/EditPostModal';
 import DeletePostModal from '../../modals/post/DeletePostModal';
-import { ApiConfig } from '../../config/api.config';
 import useLikesHooks from '../../hooks/useLikesHooks';
 import { defaultProfilePic } from '../../misc/defaultPicture';
 
@@ -109,7 +108,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
         <div className='container'>
             <div className='user'>
                 <div className='userInfo'>
-                    <img src={profilePhoto ? ApiConfig.PHOTO_PATH + profilePhoto : defaultProfilePic } alt="" />
+                    <img src={profilePhoto ? profilePhoto : defaultProfilePic } alt="" />
                     <div className='details'>
                         <Link to={`/profile/${post.userId}`}
                         style={{ textDecoration: "none", color: "inherit" }}>
@@ -134,7 +133,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
             </div>
             <div className='content'>
                 <p>{post.content}</p>
-                <img src={ApiConfig.PHOTO_PATH + post.photo} alt="" onLoad={() => console.log("Image loaded successfully!")}/>
+                <img src={post.photo} alt="" onLoad={() => console.log("Image loaded successfully!")}/>
             </div>
             <div className='info'>
                 <div className='item' onClick={() => {

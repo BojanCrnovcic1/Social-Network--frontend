@@ -8,7 +8,6 @@ import { PostType } from '../../types/PostType';
 import { CommentType } from '../../types/CommentType';
 import EditCommentModal from '../../modals/comment/EditCommentModal';
 import DeleteCommentModal from '../../modals/comment/DeleteCommentModal';
-import { ApiConfig } from '../../config/api.config';
 import { defaultProfilePic } from '../../misc/defaultPicture';
 import useLikesHooks from '../../hooks/useLikesHooks';
 import { Link } from 'react-router-dom';
@@ -120,7 +119,7 @@ const Comments: React.FC<CommentsProps> = ({ post, setCommentCount }) => {
   return (
     <div className='comments'>
         <div className='write'>
-            <img src={user?.profilePhoto ? ApiConfig.PHOTO_PATH+user?.profilePhoto : defaultProfilePic} alt="" />
+            <img src={user?.profilePhoto ? user?.profilePhoto : defaultProfilePic} alt="" />
             <input type='text' placeholder='Write a comment...' value={content} onChange={e => setContent(e.target.value)} />
             <button type='button' onClick={() => handleSumbit()}>Send</button>
         </div>
@@ -132,7 +131,7 @@ const Comments: React.FC<CommentsProps> = ({ post, setCommentCount }) => {
           comments.map((comment) => (
             <div className='comment' key={comment.commentId}>
                 <img src={
-                 comment.user?.profilePhoto && ApiConfig.PHOTO_PATH + comment.user?.profilePhoto} alt="" />
+                 comment.user?.profilePhoto && comment.user?.profilePhoto} alt="" />
                 <div className='info'>
                   <Link to={`/profile/${comment.user?.userId}`}>
                   { comment.user?.username && <span>{comment.user.username}</span>}

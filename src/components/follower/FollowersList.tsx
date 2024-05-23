@@ -3,7 +3,6 @@ import apiService, { ApiResponse } from '../../api/api.service';
 import { Link } from 'react-router-dom';
 import { User } from '../../types/User';
 import { Relationship } from '../../types/Relationsphip';
-import { ApiConfig } from '../../config/api.config';
 import { defaultProfilePic } from '../../misc/defaultPicture';
 
 interface RelationshipProps {
@@ -39,7 +38,7 @@ const FollowersList: React.FC<RelationshipProps> = ({ user }) => {
                 <li key={generateUniqueKey(followerUser)}>
                     <Link to={`/profile/${followerUser.followerId}`}>
                         <div className='information'>                      
-                        <img src={followerUser.follower.profilePhoto ? ApiConfig.PHOTO_PATH + followerUser.follower?.profilePhoto: defaultProfilePic} alt="" />
+                        <img src={followerUser.follower.profilePhoto ? followerUser.follower?.profilePhoto: defaultProfilePic} alt="" />
                         <span>{followerUser.follower?.username }</span>
                         </div>
                     </Link>

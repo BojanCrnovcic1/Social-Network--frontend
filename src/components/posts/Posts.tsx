@@ -33,7 +33,6 @@ const Posts: React.FC<PostsProps> = ({ authorId }) => {
                         return 0;
                     }
                 })
-                console.log('posts; ', setPosts)
                 setPosts(sortedPosts);
             }
         })
@@ -45,7 +44,6 @@ const Posts: React.FC<PostsProps> = ({ authorId }) => {
 
 
     const filteredPosts = authorId ? posts.filter(post => post.userId === authorId) : posts;
-    console.log('posts: ', posts)
     
   return (
     <div className='posts'>

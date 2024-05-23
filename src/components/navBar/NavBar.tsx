@@ -4,7 +4,6 @@ import { faLightbulb, faMoon, faPerson } from '@fortawesome/free-solid-svg-icons
 import { useDarkMode } from '../../context/DarkModeContext';
 import { useAuth } from '../../context/AuthContext';
 import { Link } from 'react-router-dom';
-import { ApiConfig } from '../../config/api.config';
 import { useEffect, useState } from 'react';
 import apiService, { ApiResponse } from '../../api/api.service';
 import { User } from '../../types/User';
@@ -74,7 +73,7 @@ const NavBar = () => {
                 <ul>
                   {users.map(user => (
                     <li key={user.userId}>
-                      <img src={user.profilePhoto ? ApiConfig.PHOTO_PATH + user.profilePhoto : defaultProfilePic} alt="" />
+                      <img src={user.profilePhoto ?  user.profilePhoto : defaultProfilePic} alt="" />
                       <Link to={`/profile/${user.userId}`} onClick={handleCloseResults}>
                         <span>{user.username}</span>
                       </Link>
@@ -90,7 +89,7 @@ const NavBar = () => {
         <div className='right'>        
           <FontAwesomeIcon icon={faPerson} />
           <div className='user'>
-          <img src={user?.profilePhoto ? ApiConfig.PHOTO_PATH + user?.profilePhoto: defaultProfilePic} alt="" />
+          <img src={user?.profilePhoto ? user?.profilePhoto: defaultProfilePic} alt="" />
             <Link to={`/profile/${user?.userId}`}>
               <span>{user?.username}</span>
             </Link>

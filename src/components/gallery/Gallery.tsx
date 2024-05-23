@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { PostType } from '../../types/PostType';
 import apiPhotoService, { ApiResponse } from '../../api/api.photo.service';
-import { ApiConfig } from '../../config/api.config';
 import { User } from '../../types/User';
 import './gallery.scss'
 
@@ -57,8 +56,8 @@ const Gallery: React.FC<UserPhotoProps> = ({ user }) => {
         <div className='gallery-images' ref={scrollRef}>
             <div className='gallery-images-container'>
             {postsWithPhotos.map((post, index) => (
-                <div className='gallery-image' key={`gallery-image-${index}`} onClick={() => handleImageClick(ApiConfig.PHOTO_PATH + post.photo)}>
-                    <img src={ApiConfig.PHOTO_PATH + post.photo} alt={`Post ${index + 1}`} />
+                <div className='gallery-image' key={`gallery-image-${index}`} onClick={() => post.photo && handleImageClick(post.photo)}>
+                    <img src={post.photo} alt={`Post ${index + 1}`} />
                 </div>
             ))}
             </div>

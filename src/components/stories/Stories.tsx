@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react'
 import './stories.scss'
 import { StoriesType } from '../../types/StoriesType'
 import { useAuth } from '../../context/AuthContext';
-import { ApiConfig } from '../../config/api.config';
 import AddStoriesModal from '../../modals/stories/AddStoriesModal';
 import apiPhotoService, { ApiResponse } from '../../api/api.photo.service';
 import CountdownTimer from './CountdownTimer';
@@ -217,7 +216,7 @@ return (
   <div className='stories'>
     <div className='stories-container' ref={storiesContainerRef}>
     <div className='user-info'>
-      <img src={user?.profilePhoto ? ApiConfig.PHOTO_PATH + user?.profilePhoto: defaultProfilePic} alt="" />
+      <img src={user?.profilePhoto ? user?.profilePhoto: defaultProfilePic} alt="" />
       <span>{user?.username}</span>
       <button type='button' onClick={() => setStoryModalOpen(true)}>+</button>
       {storyModalOpen && (
@@ -230,7 +229,7 @@ return (
         .filter(story => story.userId === user?.userId) 
         .map(story => (
           <div className={`story ${story.storiesId && isStoryViewed(story.storiesId) ? 'story-viewed' : ''}`} key={story.storiesId}>
-            <img src={ApiConfig.PHOTO_PATH + story.photoStories} alt="" />
+            <img src={story.photoStories} alt="" />
             <span>{ story.userId && usernames[story.userId]}</span>
             { story.createdAt && <CountdownTimer startTime={new Date(story.createdAt)} /> }
             <button type='button' onClick={() => {if (story.storiesId) {handleViewStory(story); trackViewedStory(story.storiesId); }}}>+</button>
@@ -242,7 +241,7 @@ return (
         .filter(story => story.userId !== user?.userId) 
         .map(story => (
           <div className={`story ${story.storiesId && isStoryViewed(story.storiesId) ? 'story-viewed' : ''}`} key={story.storiesId}>
-            <img src={ApiConfig.PHOTO_PATH + story.photoStories} alt="" />
+            <img src={story.photoStories} alt="" />
             <span>{story.userId && usernames[story.userId]}</span>
             <button type='button' onClick={() => story.storiesId && handleViewStory(story)}>+</button>
           </div>
@@ -253,7 +252,7 @@ return (
        {fullscreenStory && (
         <div className='fullscreen-story' onClick={() => setFullscreenStory(null)}>
           <div className='story-images'>
-          <img src={ApiConfig.PHOTO_PATH + fullscreenStory.photoStories} alt="" />
+          <img src={fullscreenStory.photoStories} alt="" />
           </div>
           <div className='story-data'>
             <div className='story-button-delete'>

@@ -8,7 +8,6 @@ import { useEffect, useState } from 'react';
 import { User } from '../../types/User';
 import useFollowUser from '../../hooks/useFollowUser';
 import { useAuth } from '../../context/AuthContext';
-import { ApiConfig } from '../../config/api.config';
 import UploadCoverPhotoModal from '../../modals/user/UploadCoverPhotoModal';
 import UploadProfilePhotoModal from '../../modals/user/UploadProfilePhotoModal';
 import EditUserModal from '../../modals/user/EditUserModal';
@@ -84,7 +83,7 @@ const handleCloseEditUserProfileModal = () => {
   return (
     <div className='profile'>
       <div className='images'>     
-        <img src={otherUser?.coverPhoto ? ApiConfig.PHOTO_PATH + otherUser?.coverPhoto : defaultCoverPic} alt='' className='cover'/>
+        <img src={otherUser?.coverPhoto ? otherUser?.coverPhoto : defaultCoverPic} alt='' className='cover'/>
         {user && user.userId === userId && (
            <div className="upload-icon-container">
            <FontAwesomeIcon icon={faPlus} onClick={() => setUploadCoverPhotoModalOpen(true)} />
@@ -92,7 +91,7 @@ const handleCloseEditUserProfileModal = () => {
          )}
          {uploadCoverPhotoModalOpen && (
          <UploadCoverPhotoModal show={uploadCoverPhotoModalOpen} handleClose={handleCloseUploadCoverModal} />)}         
-        <img src={otherUser?.profilePhoto ? ApiConfig.PHOTO_PATH + otherUser.profilePhoto: defaultProfilePic} alt='' className='profilePic' />
+        <img src={otherUser?.profilePhoto ?  otherUser.profilePhoto: defaultProfilePic} alt='' className='profilePic' />
         {user && user.userId === userId && (
            <div className="upload-profile-icon-container">
            <FontAwesomeIcon icon={faPlus} onClick={() => setUploadProfilePhotoModalOpen(true)} />

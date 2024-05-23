@@ -3,7 +3,6 @@ import apiService, { ApiResponse } from '../../api/api.service';
 import { Link } from 'react-router-dom';
 import { User } from '../../types/User';
 import { Relationship } from '../../types/Relationsphip';
-import { ApiConfig } from '../../config/api.config';
 import { defaultProfilePic } from '../../misc/defaultPicture';
 
 interface RelationshipProps {
@@ -25,7 +24,6 @@ const FollowingList: React.FC<RelationshipProps> = ({ user }) => {
             }
             if (res.status === 'ok') {
                 setFollowing(res.data);
-                console.log('following: ', res.data)
             }
         })
         .catch(error => {
@@ -40,7 +38,7 @@ const FollowingList: React.FC<RelationshipProps> = ({ user }) => {
                 <li key={generateUniqueKey(followedUser)}>
                     <Link to={`/profile/${followedUser.followingId}`}>
                         <div className='information'>
-                        <img src={followedUser.following.profilePhoto ? ApiConfig.PHOTO_PATH + followedUser.following?.profilePhoto: defaultProfilePic} alt="" />
+                        <img src={followedUser.following.profilePhoto ? followedUser.following?.profilePhoto: defaultProfilePic} alt="" />
                         <span>{followedUser.following?.username}</span>
                         </div>
                     </Link>

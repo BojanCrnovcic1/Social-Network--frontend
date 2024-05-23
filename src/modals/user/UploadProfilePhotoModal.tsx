@@ -49,7 +49,7 @@ const UploadProfilePhotoModal: React.FC<ProfilePhotoModalProps> = ({ show, handl
             reader.readAsDataURL(event.target.files[0]);
           }
     }
-
+  
   return (
     <div className={`modal ${show ? 'show' : 'hide'}`}>
             <div className='modal-content'>

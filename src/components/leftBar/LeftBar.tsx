@@ -3,7 +3,6 @@ import { useAuth } from '../../context/AuthContext'
 import './leftBar.scss'
 import {  faPassport } from '@fortawesome/free-solid-svg-icons'
 import { Link, useNavigate } from 'react-router-dom'
-import { ApiConfig } from '../../config/api.config'
 import { useEffect, useState } from 'react'
 import DeleteUserModal from '../../modals/user/DeleteUserModal'
 import apiService, { ApiResponse, removeToken } from '../../api/api.service'
@@ -51,8 +50,9 @@ const LeftBar:React.FC<{visible: boolean}> = ({visible}) => {
             <div className='menu'>
             <div className='user'>
                 <div className='userInfo'>
-                    <img src={user.profilePhoto ? ApiConfig.PHOTO_PATH + user.profilePhoto: defaultProfilePic} alt="" />
+                    <img src={user.profilePhoto ? user.profilePhoto: defaultProfilePic} alt="" />
                     <span>{user?.username}</span>
+                    
                     <Link to={`/profile/${user.userId}`}>
                     <FontAwesomeIcon icon={faPassport} />
                     </Link>                    

@@ -1,7 +1,6 @@
-import { faMagnifyingGlass, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react'
-import { User } from '../../types/User';
 
 interface SearchBarProps {
     onSearch: (searchTerm: string) => void
