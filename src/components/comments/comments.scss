@@ -105,6 +105,40 @@
                 }
             }
         }
+    }
+    
+    @media screen and (max-width: 400px) {
+        .write {
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            img {
+                display: none;
+            }
+            
+            input {
+                width: 100%;
+            }
+        }
+    } 
+
+    @media screen and (max-width: 380px) {
+        .write {
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            img {
+                display: none;
+            }
+            
+            input {
+                width: 100%;
+            }
+        }
     } 
 
     @media screen and (max-width: 360px) {

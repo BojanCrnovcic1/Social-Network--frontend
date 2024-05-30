@@ -102,6 +102,31 @@
       z-index: 9999;
     }
   }
+  @media screen and (max-width: 400px) {
+    .profile {
+     
+      max-width: 350px;
+      margin: 0;
+    }
+    .home {
+      
+      max-width: 350px;
+      margin: 0;
+    }
+  }
+
+  @media screen and (max-width: 380px) {
+    .profile {
+     
+      max-width: 330px;
+      margin: 0;
+    }
+    .home {
+      
+      max-width: 330px;
+      margin: 0;
+    }
+  }
 
   @media screen and (max-width: 360px) {
     .profile {

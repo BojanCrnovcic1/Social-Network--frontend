@@ -138,6 +138,19 @@
     @media screen and (max-width: 420px) {
         width: 231px;
     }
+    @media screen and (max-width: 420px) {
+        width: 200px;
+    }
+    
+    @media screen and (max-width: 380px) {
+        width: 190px;
+        .gallery-images {
+            .gallery-image {
+                img {
+                    width: 170px;
+                }
+            }
+        }
 
     @media screen and (max-width: 360px) {
         width: 170px;
@@ -151,4 +164,4 @@
     }
     
   }
-  
+}  
