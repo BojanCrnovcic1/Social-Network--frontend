@@ -18,22 +18,44 @@
 .navbar {
     background: rgb(21, 20, 20);
     color: white;
-    border: 3px bisque;
+    
 
-    span {
-        color: goldenrod;
+    .left {
+        span {
+            color: goldenrod;
+        }
     }
-
-    input {
-        color: white;
+    .search {
+        form {
+            input {
+                color: white;
+            }
+        }
+    }
+    .right {
+        .user {
+            a {
+                span {
+                    color: goldenrod;
+                }
+            }
+        }
     }
 }
 
 .search-results {
     background: black;
     box-shadow: 0 3px 5px rgba(255, 255, 255, 0.8);
+    ul {
+        li {
+            a {
+                span {
+                    color: white;
+                }
+            }
+        }
+    }
 }
-
 .leftbar {
     background: rgb(21, 20, 20);
     color: white;
@@ -131,17 +153,19 @@
     }
     .comment {
         border-bottom: 1px solid grey;
-    }
-    .info {
+
+        .info {
         a {
             span {
                 border-bottom: 0.5px solid rgb(66, 64, 64);
                 color: white;
             }
-            p {
-               color: rgb(169, 166, 166);
-            }
+           
         }
+        p {
+            color: rgb(200, 193, 193);
+         }
+    }
     }
 }
 .buttons {
@@ -149,6 +173,13 @@
         .fa-icon {
             background: rgb(64, 63, 63);
         }
+    }
+}
+
+.photo-gallery-profile {
+    background-color: black;
+    h3 {
+        color: white;
     }
 }
 .section {

@@ -43,11 +43,11 @@ const Registration = () => {
                 <div className='card'>
                     <div className='left'>
                         <h1>S-Network</h1>
-                        <p>Svrha mreze je samo kao projekat ali moze da sluzi kao
-                            prava mreza. Zabavite se... </p>
+                        <p>Svrha mreze je samo kao projekat ali moze da sluzi i kao
+                           nacin zabave za Vase prijatelje.</p>
                         <span>Do you have an account?</span>
                         <Link to='/login'>
-                        <button>Login</button>
+                        <button type='button'>Login</button>
                         </Link>
                     </div>
                     <div className='right'>

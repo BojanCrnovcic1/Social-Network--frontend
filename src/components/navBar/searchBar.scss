@@ -1,0 +1,15 @@
+.search-bar {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: 360px){
+        max-width: 74vw;
+        align-items: center;
+
+        .fa-icon {
+            display: none;
+        }
+    }
+}

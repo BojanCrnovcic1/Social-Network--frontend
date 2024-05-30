@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .section {
   display: flex;
   background-color: white;
@@ -7,14 +11,14 @@
 
 .left-toggle {
   
-  width: 20px;
+  width: 10px;
   display: none;
   z-index: 10000;
 }
 
 .right-toggle {
   display: none;
-  width: 20px;
+  width: 10px;
   z-index: 10000;
 }
 
@@ -72,17 +76,19 @@
     display: none;
   }
 
-  @media screen and (max-width: 425px){
-
-    .profile {
-      width: 385px;
+  @media screen and (max-width: 426px){
+  
+    .profile {    
+      max-width: 373px;
+      margin: 0;
     }
-    .home {
-      width: 385px
+    .home {     
+      max-width: 373px;
+      margin: 0;
     }
 
     .right-toggle {
-      margin-right: 60px;
+     margin: 0;
     }
 
     .rightbar.show {
@@ -94,6 +100,19 @@
       width: 200px;
 
       z-index: 9999;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    .profile {
+     
+      max-width: 310px;
+      margin: 0;
+    }
+    .home {
+      
+      max-width: 310px;
+      margin: 0;
     }
   }
 

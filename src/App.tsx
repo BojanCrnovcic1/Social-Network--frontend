@@ -29,14 +29,14 @@ function App() {
       <div>
         <NavBar />
         <div className='section'>
-          <button  type='button' className='left-toggle' onClick={toggleLeftBar} >L</button>         
+          <button type='button' className='left-toggle' onClick={toggleLeftBar} >L</button>         
             <LeftBar visible={leftBarVisible}/>
           
           <div style={{flex: 6}}>
             <Outlet />
           </div>         
           <RightBar visible={rightBarVisible}/>
-          <button className='right-toggle' onClick={toggleRightBar}>R</button>
+          <button type='button' className='right-toggle' onClick={toggleRightBar}>R</button>
         </div>
       </div>
     )

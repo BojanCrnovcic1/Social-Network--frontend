@@ -62,6 +62,11 @@
         .content {
             margin: 20px 0px;
             border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+
+            p {
+              word-break: break-word;
+              white-space: normal;
+            }
     
             img {
               width: 100%;
@@ -84,4 +89,6 @@
             }
           }
     }
+
+    
 }

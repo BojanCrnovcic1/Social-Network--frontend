@@ -33,6 +33,7 @@ const EditPostModal: React.FC<ContentModalProps> = ({ show, post, handleClose })
             console.error(error);
         })
     }
+    
 
   return (
     <div className={`modal ${show ? 'show' : 'hide'}`}>

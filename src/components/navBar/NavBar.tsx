@@ -50,6 +50,55 @@ const NavBar = () => {
       setShowResults(false);
       setSearchTerm(''); 
     }
+
+    return (
+      <div className={`navbar ${isDarkMode ? 'dark-mode' : ''}`}>
+          <div className='left'>
+              <span>S-Network</span>
+              <FontAwesomeIcon icon={isDarkMode ? faLightbulb : faMoon} onClick={toggleDarkMode} />
+          </div>
+
+          <div className='search'>
+              <SearchBar onSearch={(term) => { setSearchTerm(term); setShowResults(true); }} />
+          </div>
+          {showResults && (
+            <div className='search-results'>
+              <div className='search-header'>
+                 <h3>Search results: </h3>
+                 <button
+                   type='button'
+                   className="close-results"
+                   onClick={handleCloseResults}
+                   title="Close results" >x</button>
+              </div>
+              {users.length > 0 ? (
+                <ul>
+                  {users.map(user => (
+                    <li key={user.userId}>
+                      <img src={user.profilePhoto ?  user.profilePhoto : defaultProfilePic} alt="" />
+                      <Link to={`/profile/${user.userId}`} onClick={handleCloseResults}>
+                        <span>{user.username}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p>User not found...</p>
+              )}
+            </div>
+          )}
+
+          <div className='right'>
+              <FontAwesomeIcon icon={faPerson} />
+              <div className='user'>
+                  <img src={user?.profilePhoto ? user?.profilePhoto: defaultProfilePic} alt="" />
+                  <Link to={`/profile/${user?.userId}`}>
+                      <span>{user?.username}</span>
+                  </Link>
+              </div>
+          </div>
+      </div>
+    )
    
     return (
       <div className={`navbar ${isDarkMode ? 'dark-mode' : ''}`}>

@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 
 .navbar {
     display: flex;
@@ -10,10 +13,11 @@
     background-color: white;
     color:black;
     z-index: 999;
-
+    
     .left {
         display: flex;
         align-items: center;
+        padding-right: 10px;
         gap: 30px;
 
         span {
@@ -23,27 +27,35 @@
             padding-left: 20px;
         }
 
-        .search {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            border: 1px solid themed("border");
-            border-radius: 5px;
-            padding: 5px;
+    }
 
+    .search {
+        display: flex;
+        align-items: center;
+        width: 720px;
+        gap: 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 5px;
+        
+        form {
+            gap: 20px;
+            .fa-icon {
+                display: none;
+            }
             input {
                 border: none;
-                width: 500px;
+                width: 740px;
                 background-color: transparent;
-                color: themed("textColor");
-            }
+                color: black;
+            } 
         }
-
     }
 
     .right {
         display: flex;
         align-items: center;
+        padding-left: 10px;
         gap: 60px;
 
         .user {
@@ -52,54 +64,102 @@
             gap: 20px;
             font-weight: 500;
             margin-right: 50px;
-           
+
             img {
                 width: 30px;
                 height: 30px;
                 border-radius: 50%;
                 object-fit: cover;
             }
+
             a {
                 text-decoration: none;
                 font-size: medium;
                 color: black
-                
             }
         }
     }
 
     @media screen and (max-width: 768px) {
+        margin: 0px;
+        padding: 0px;
         .left {
-          gap: 10px;
-        }
-    
-        .right {
-          display: none;
-          
-        }
-        .left .search {
-            flex-direction: column;
-          }
-      }
-
-      @media screen and (max-width:426px) {
-        .left {
+            padding-left: 10px;
+            gap: 10px;
+            
+            flex: 0;
             span {
                 display: none;
-            }
-            .fa-icon {
-                display: block;
             }
         }
 
         .search {
-            display: relative;
-          }
-
+            flex: 1;
+            form {               
+                input {
+                    width: 400px;
+                }
+            }
+        }
         .right {
             display: none;
         }
-      }   
+    }
+
+    @media screen and (max-width: 426px) {
+        .left {
+            flex: 0;
+            width: 15%;
+            justify-content: flex-start;
+            padding-left: 10px;
+
+            span {
+                display: none;
+            }
+        }
+        .search {
+            flex: 1;
+            width: 100%;
+            justify-content: center;
+            margin: 0 auto;           
+            form {
+                gap: 5px;               
+                input {                   
+                    width: 100%;
+                }
+            }
+        }
+        .right {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+        .left {
+            flex: 0;
+            width: 15%;
+            justify-content: flex-start;
+
+            span {
+                display: none;
+            }
+        }
+        .search {
+            flex: 1;
+            width: 100%;
+            justify-content: center;
+            margin: 0 auto;           
+            form {
+                gap: 5px;               
+                input {                   
+                    width: 100%;
+                }
+            }
+        }
+        .right {
+            display: none;
+        }
+    }
 }
 
 .search-results {
@@ -154,19 +214,23 @@
             border-bottom: 1px solid rgb(172, 167, 167);
             padding-bottom: 10px;
             img {
-                width: 30px;
-                height: 30px;
+                width: 40px;
+                height: 40px;
                 border-radius: 50%;
                 margin-right: 10px;
             }
 
             a {
                 text-decoration: none;
-                color: black
+                color: black;
                 span {
-                    color: black
+                    color: black;
+                    font-size: 1.3rem;
                 }
             }
         }
     }
+   
 }
+
+

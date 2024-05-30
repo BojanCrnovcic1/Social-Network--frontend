@@ -21,7 +21,7 @@
           .upload-profile-icon-container {
             position: absolute;
             top: calc(50% - 25px + adjustment);
-            left: calc(50% + 94px); 
+            left: calc(50% + 80px); 
             transform: translateY(-50%); 
             color: white;
             width: 15px;
@@ -33,7 +33,7 @@
 
         .cover {
             width: 100%;
-            height: 100%;
+            height: 116%;
             object-fit: cover;
             top: 0;
             left: 0;
@@ -54,11 +54,11 @@
     }
 
     .profileContainer {
-        padding: 20px 70px;
+        padding: 60px 70px;
 
 
         .uInfo {
-            height: 180px;
+            height: 200px;
             -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
             -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
             box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
@@ -87,6 +87,7 @@
                 span {
                     font-size: 30px;
                     font-weight: 500;
+                    padding-bottom: 20px;
                 }
 
                 button {
@@ -105,16 +106,192 @@
                 align-items: center;
                 justify-content: flex-end;
                 gap: 10px;
-
                 p {
-                    font-size: 16px;
+                    font-size: 1rem;
                     max-width: 100%;
-                    word-break: break-all;
+                    word-break: break-word;
+                    white-space: normal;
                 }
               }
+        } 
+        
+        
+          
+    }  
+    
+    @media screen and (max-width: 768px) {
+            
+            .images {
+                .profilePic {
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    top: 200px;
+                }
+            
+            .profileContainer {
+                .uInfo {
+                    padding-bottom: 30px;
+                    align-items: center;
+                }
+            }
         }
     }
 
+    @media screen and (max-width: 426px) {
+        
+            .images {
+                width: 100%;
+                height: 200px;
+                position: relative;
+                .upload-profile-icon-container {
+                    position: absolute;
+                    top: calc(50% - 25px + adjustment);
+                    left: calc(50% + 56px); 
+                    transform: translateY(-50%); 
+                    color: white;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    background-color: blue;
+                    cursor: pointer;
+                  }
+                .cover {
+                    width: 100%;
+                    height: 126%;
+                    object-fit: cover;
+                    top: 0;
+                    left: 0;
+                    filter: brightness(0.7);      
+                }
+                .profilePic {
+                    width: 130px;
+                    height: 130px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    top: 170px;
+                }
+            }
+            .profileContainer {
+                align-items: center;
+                .uInfo {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    margin-bottom: 20px;
+                    .left {
+                        .fake-icon {
+                            display: none;
+                        }
+                        a {
+                            display: block;
+                        }
+                    }
+
+                    .center {
+                        span {
+                            font-size: 1.5rem;
+                        }
+                        button {
+                            padding: 5px 10px;
+                        }
+                    }
+
+                    .right {
+                        p {
+                            font-size: 0.5rem;
+                            max-width: 100%;
+                            word-break: break-word;
+                            white-space: normal;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 360px) {
+        
+            .images {
+                width: 100%;
+                height: 200px;
+                position: relative;
+                .upload-profile-icon-container {
+                    position: absolute;
+                    top: calc(50% - 25px + adjustment);
+                    left: calc(50% + 56px); 
+                    transform: translateY(-50%); 
+                    color: white;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    background-color: blue;
+                    cursor: pointer;
+                  }
+                .cover {
+                    width: 100%;
+                    height: 126%;
+                    object-fit: cover;
+                    top: 0;
+                    left: 0;
+                    filter: brightness(0.7);      
+                }
+                .profilePic {
+                    width: 130px;
+                    height: 130px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    top: 170px;
+                }
+            }
+            .profileContainer {
+                align-items: center;
+                .uInfo {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    margin-bottom: 20px;
+                    .left {
+                        .fake-icon {
+                            display: none;
+                        }
+                        a {
+                            display: block;
+                        }
+                    }
+
+                    .center {
+                        span {
+                            font-size: 1.5rem;
+                        }
+                        button {
+                            padding: 5px 10px;
+                        }
+                    }
+
+                    .right {
+                        p {
+                            font-size: 0.5rem;
+                            max-width: 100%;
+                            word-break: break-word;
+                            white-space: normal;
+                        }
+                    }
+                }
+            }
+        }
     
 
 }

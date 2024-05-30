@@ -13,6 +13,7 @@ import UploadProfilePhotoModal from '../../modals/user/UploadProfilePhotoModal';
 import EditUserModal from '../../modals/user/EditUserModal';
 import { defaultCoverPic, defaultProfilePic } from '../../misc/defaultPicture';
 import { Link } from 'react-router-dom';
+import GalleryProfile from '../../components/gallery/GalleryProfile';
 
 const Profile = () => {
 const { id } = useParams();
@@ -103,7 +104,9 @@ const handleCloseEditUserProfileModal = () => {
       <div className='profileContainer'>
         <div className='uInfo'>
           <div className='left'>
-            <FontAwesomeIcon icon={faMessage} />
+            <div className='fake-icon'>
+               <FontAwesomeIcon icon={faMessage} />
+            </div>
             <Link to={'/'}>
             <FontAwesomeIcon icon={faGlobe} />
             </Link>
@@ -126,6 +129,7 @@ const handleCloseEditUserProfileModal = () => {
             <p>{otherUser && otherUser?.bio}</p>
           </div>
         </div>
+        <GalleryProfile authorId={userId} />
         <Posts authorId={userId}/>
       </div>
     </div>

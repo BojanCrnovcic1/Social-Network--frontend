@@ -17,7 +17,7 @@ const LeftBar:React.FC<{visible: boolean}> = ({visible}) => {
         if(user?.userId) {
         fetchLoginUser(user?.userId);
         }
-    }, [user?.userId])
+    }, [user?.userId, user?.profilePhoto, user?.bio])
 
     const handleModalClose = () => {
         setDeleteUserModalOpen(false);

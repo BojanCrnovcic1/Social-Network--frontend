@@ -40,36 +40,38 @@ const Login = () => {
 
 
     const doLogin = async () => {
-        apiService('/auth/user/login', 'post', {
-            email: email,
-            password: password
-        })
-        .then(async (res: ApiResponse) => {
-            if (res.status === 'error') {
-                console.log(res.data);
-                
-                return;
-            }
-            if (res.status === 'ok') {
-                if (res.data.statusCode !== undefined) {
-                    let message = ''
-                    switch(res.data.statusCode) {
-                        case -3001: message = 'Unknown e-mail!'; break;
-                        case -3002: message = 'Bad password'; break;
-                    }
-                    setMessage(message);
+        try {
+            apiService('/auth/user/login', 'post', {
+                email: email,
+                password: password
+            })
+            .then(async (res: ApiResponse) => {
+                if (res.status === 'error') {                   
                     return;
                 }
-
-                saveToken(res.data.token);
-                
-                const userData = await fatchUserData()
-
-                login(userData)
-                console.log('login: ', login.toString())
-                navigate('/');
-            }
-        })
+                if (res.status === 'ok') {
+                    if (res.data.statusCode !== undefined) {
+                        let message = ''
+                        switch(res.data.statusCode) {
+                            case -3001: message = 'Unknown e-mail!'; break;
+                            case -3002: message = 'Bad password'; break;
+                        }
+                        setMessage(message);
+                        return;
+                    }
+    
+                    saveToken(res.data.token);
+                    
+                    const userData = await fatchUserData()
+    
+                    login(userData)
+                    console.log('login: ', login.toString())
+                    navigate('/');
+                }
+            })
+        } catch (error) {
+            console.error('Bad request.', error)
+        }
     }
 
   return (
@@ -77,11 +79,14 @@ const Login = () => {
         <div className='card'>
             <div className='left'>
                 <h1>Hello World!</h1>
-                <p>Dobrodosli u s-network aplikaciju. Nema cenzure... </p>
+                <p>Dobrodosli u s-network aplikaciju. Nema cenzure... 
+                   Nije potrebna prava email adresa...
+                </p>
                 <span>Don't you have an account?</span>
                 <Link to='/register'>
                 <button type='button'>Register</button>
                 </Link>
+                <small><p>bojan.crnovcic4@gmail.com</p></small>
             </div>
             <div className='right'>
                 <h1>Login</h1>
